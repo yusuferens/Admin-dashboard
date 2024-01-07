@@ -6,12 +6,13 @@
     --bg-primary: #23232e;
     --bg-secondary: #141418;
     --transition-speed: 1s;
-    --drawer-color: #D2E3C8;
+    --drawer-color: #4F6F52;
     --drawer-width: clamp(210px, 15vw, 325px);
     --navbar-bg-1: #4F6F52;
+    --navbar-bg-2: #dbf0ce;
     --navbar-color-1: #c9c9c9;
     --navbar-color-2: #c9c9c9;
-    --green-1: #739072;
+    --green-1: #e3e4e3;
     --gh-avatar: url('https://github.com/yusuferens.png');
     --gh-avatar2: url('https://github.com/jeff.png');
     --gh-avatar2: url('https://github.com/bob.png');
@@ -58,13 +59,105 @@ body{
 .drawer:hover ~ .content{
     margin-left: calc(var(--drawer-width) - 5rem);
 }
+.navbar .account{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
 .navbar{
     grid-area: nav;
     transition: var(--transition-notDrawer);
+    background-color: var(--navbar-bg-2);
+    padding: 1.5rem 3rem;
+    border-bottom: 2px solid rgb(219,219,219);
+}
+
+.gh-avatar{
+    background: var(--gh-avatar) center center / cover no-repeat;
+    border-radius: 50%;
+}
+
+.account .gh-avatar{
+    margin: 0 1rem 0 2.5rem;
+    height: 40px;
+    width: 40px;
+}
+
+.topNav{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    margin-bottom: 2.5rem;
+}
+.search{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    width: 100%;
+}
+
+.search > input {
+    display: inline-block;
+    border: 0;
+    background-color: rgb(255, 255, 255);
+    padding: 0.5 rem 1.5rem;
+    outline-color: rgb(56, 55, 55);
+    border-radius: 5px;
+    margin-left: 1.25rem;
+    width: min(80%, 600px);
+    margin-right: 20px;
 }
 
 .content{
     grid-area: content;
+    background-color: var(--green-1);
+}
+
+img{
+    cursor: pointer;
+}
+.bottom{
+   display: flex;
+   justify-content: space-between;
+   align-items: center; 
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.profile .gh-avatar{
+    width: 75px;
+    height: 75px;
+}
+
+.greeting{
+    font-weight: 800;
+    margin-bottom: 0.4rem;
+}
+
+.profile .name{
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+.btn{
+    background-color: var(--drawer-color);
+    color: var(--text-secondary);
+    font-weight: 800;
+    padding: .4rem 1.8rem;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid gray;
+    cursor: pointer;
 }
 .menuItem{
     color: var(--text-secondary);
