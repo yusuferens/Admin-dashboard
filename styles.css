@@ -1,4 +1,13 @@
-.menuItem img{
+.menuItem img {
+    height: 24px;
+    width: 24px;
+}
+.menuIcon img {
+    height: 24px;
+    width: 24px;
+}
+
+.icons img {
     height: 24px;
     width: 24px;
 }
