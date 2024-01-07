@@ -40,6 +40,18 @@ body{
     position: fixed;
     transition: var(--transtion-drawer);
     overflow: hidden;
+    height: 100vh;
+}
+
+.drawer:hover{
+    width: var(--drawer-width);
+}
+.menuItem > h1{
+    display: none;
+    margin-left: 5%;
+}
+.drawer:hover > .menuItem > h1{
+    display: inline;
 }
 
 .sidebar{
@@ -48,6 +60,17 @@ body{
 
 .content{
     grid-area: content;
+}
+.menuItem{
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.menuItem > * {
+    cursor: pointer;
 }
 .menuItem img {
     height: 24px;
@@ -59,6 +82,11 @@ body{
 }
 
 .icons img {
+    height: 24px;
+    width: 24px;
+}
+
+.projects img{
     height: 24px;
     width: 24px;
 }
