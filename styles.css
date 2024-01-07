@@ -54,8 +54,13 @@ body{
     display: inline;
 }
 
+.drawer:hover ~ .navbar,
+.drawer:hover ~ .content{
+    margin-left: calc(var(--drawer-width) - 5rem);
+}
 .navbar{
     grid-area: nav;
+    transition: var(--transition-notDrawer);
 }
 
 .content{
